@@ -8,20 +8,7 @@ using System.Data;
 namespace Ventas
 {
     class Operaciones:BD
-    {
-    /*public void ListarClientes(DataGridView datagridview) {
-            Abrir();
-            string query="select * from Cliente";
-            SqlCommand cmd = new SqlCommand(query,con);
-            var lista= cmd.ExecuteReader();
-            while (lista.Read())
-            {
-                datagridview.Rows.Add(lista.GetString(1), lista.GetString(2), lista.GetString(3), lista.GetString(4),lista.GetString(5));
-            }
-            Cerrar();
-        }
-        */
-       
+    {        
         public List<CClientes> BuscarClientes(string nom,string ape)
         {
             List<CClientes> listaClientes = new List<CClientes>();

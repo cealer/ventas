@@ -8,64 +8,31 @@ namespace Ventas
 {
     class CClientes
     {
-        private string nombres, apellidos, dni, direccion, telefono;
-        private int id;
-
-        public int Id
-        {
-            get { return id; }
-            set { id = value; }
-        }
-
+        public int Id{ get; set; }
+        public string Nombres { get; set; }
+        public string Apellidos { get; set; }
+        public string Dni { get; set; }
+        public string Direccion { get; set; }
+        public string Telefono { get; set; }
+        
         public CClientes() { }
 
         public CClientes(string nom,string ape,string dni,string dire,string tele) {
-            this.nombres = nom;
-            this.apellidos = ape;
-            this.dni = dni;
-            this.direccion = dire;
-            this.telefono = tele;
+            this.Nombres = nom;
+            this.Apellidos = ape;
+            this.Dni = dni;
+            this.Direccion = dire;
+            this.Telefono = tele;
         }
 
         public CClientes(int id,string nom, string ape, string dni, string dire, string tele)
         {
-            this.id = id;
-            this.nombres = nom;
-            this.apellidos = ape;
-            this.dni = dni;
-            this.direccion = dire;
-            this.telefono = tele;
+            this.Id = id;
+            this.Nombres = nom;
+            this.Apellidos = ape;
+            this.Dni = dni;
+            this.Direccion = dire;
+            this.Telefono = tele;
         }
-
-        public string Telefono
-        {
-            get { return telefono; }
-            set { telefono = value; }
-        }
-
-        public string Direccion
-        {
-            get { return direccion; }
-            set { direccion = value; }
-        }
-
-        public string Dni
-        {
-            get { return dni; }
-            set { dni = value; }
-        }
-
-        public string Apellidos
-        {
-            get { return apellidos; }
-            set { apellidos = value; }
-        }
-
-        public string Nombres
-        {
-            get { return nombres; }
-            set { nombres = value; }
-        }
-
     }
 }

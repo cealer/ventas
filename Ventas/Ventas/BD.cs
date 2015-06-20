@@ -9,7 +9,7 @@ namespace Ventas
 {
     class BD
     {
-      public  SqlConnection con = new SqlConnection("Data Source=CEALER-LAPTOP;Initial Catalog=dbVentas;Integrated Security=True");
+        public  SqlConnection con = new SqlConnection("Data Source=CEALER-LAPTOP;Initial Catalog=dbVentas;Integrated Security=True");
 
         public void Abrir() {
             con.Open();

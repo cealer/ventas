@@ -130,6 +130,7 @@
             this.dgvLista.Location = new System.Drawing.Point(40, 146);
             this.dgvLista.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.dgvLista.Name = "dgvLista";
+            this.dgvLista.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -147,36 +148,42 @@
             // 
             this.Column6.HeaderText = "IdCliente";
             this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             this.Column6.Visible = false;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Nombres";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             this.Column1.Width = 200;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Apellidos";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             this.Column2.Width = 200;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "DNI";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             this.Column3.Width = 200;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Direccion";
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             this.Column4.Width = 200;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "Telefono";
             this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             this.Column5.Width = 200;
             // 
             // contextMenuStrip1

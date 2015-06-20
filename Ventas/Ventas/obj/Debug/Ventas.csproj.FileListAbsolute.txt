@@ -2,7 +2,6 @@ C:\Users\CealeR\AppData\Local\Temporary Projects\Ventas\bin\Debug\Ventas.exe.con
 C:\Proyecto\Ventas\Ventas\bin\Debug\Ventas.exe.config
 C:\Proyecto\Ventas\Ventas\bin\Debug\Ventas.exe
 C:\Proyecto\Ventas\Ventas\bin\Debug\Ventas.pdb
-C:\Proyecto\Ventas\Ventas\obj\Debug\Ventas.csprojResolveAssemblyReference.cache
 C:\Proyecto\Ventas\Ventas\obj\Debug\Ventas.Clientes.resources
 C:\Proyecto\Ventas\Ventas\obj\Debug\Ventas.Form1.resources
 C:\Proyecto\Ventas\Ventas\obj\Debug\Ventas.Properties.Resources.resources
@@ -10,3 +9,14 @@ C:\Proyecto\Ventas\Ventas\obj\Debug\Ventas.csproj.GenerateResource.Cache
 C:\Proyecto\Ventas\Ventas\obj\Debug\Ventas.exe
 C:\Proyecto\Ventas\Ventas\obj\Debug\Ventas.pdb
 C:\Proyecto\Ventas\Ventas\obj\Debug\Ventas.Empleados.resources
+C:\Proyecto\Ventas\Ventas\obj\Debug\Ventas.Productos.resources
+C:\Proyecto\Ventas\Ventas\obj\Debug\Ventas.fClientesBuscar.resources
+C:\Proyecto\Ventas\Ventas\obj\Debug\Ventas.Ventas.resources
+C:\Proyecto\Ventas\Ventas\obj\Debug\Ventas.fEmpleadosBuscar.resources
+C:\Proyecto\Ventas\Ventas\obj\Debug\Ventas.csprojResolveAssemblyReference.cache
+C:\Proyecto\Ventas\Ventas\obj\Debug\Ventas.fProductosBuscar.resources
+C:\Proyecto\Ventas\Ventas\obj\Debug\Ventas.Registros.resources
+C:\Proyecto\Ventas\Ventas\obj\Debug\Ventas.BuscarClientes.resources
+C:\Proyecto\Ventas\Ventas\obj\Debug\Ventas.BuscarVentas.resources
+C:\Proyecto\Ventas\Ventas\bin\Debug\itextsharp.dll
+C:\Proyecto\Ventas\Ventas\bin\Debug\itextsharp.xml

@@ -30,5 +30,25 @@ namespace Ventas
             formempleado.MdiParent = this;
             formempleado.Show();
         }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Productos frm = new Productos();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void ventasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+            Ventas aux = new Ventas();
+            aux.MdiParent = this;
+            aux.Show();
+        }
+
     }
 }

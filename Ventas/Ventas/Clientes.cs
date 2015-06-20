@@ -12,6 +12,11 @@ namespace Ventas
 {
     public partial class Clientes : Form
     {
+
+        //Listar todo
+        dsGeneral2 ds = new dsGeneral2();
+        //Usar los procedimientos creados(inserta,elimnar,etc)
+        dsGeneral2TableAdapters.ClienteTableAdapter tcliente = new dsGeneral2TableAdapters.ClienteTableAdapter();
         Operaciones operacion = new Operaciones();
         
         public Clientes()
@@ -27,11 +32,13 @@ namespace Ventas
                 string nom, ape;
                 nom = tbxNombresLista.Text;
                 ape = tbxApellidosLista.Text;
-                var lista = operacion.BuscarClientes(nom, ape);
-                foreach (var item in lista)
+                tcliente.listar(ds.Cliente,nom,ape);
+           
+                foreach (DataRow fila in ds.Cliente.Rows)
                 {
-                    dgvLista.Rows.Add(item.Id,item.Nombres,item.Apellidos,item.Dni,item.Direccion,item.Telefono);
+          dgvLista.Rows.Add(fila[0].ToString(), fila[1].ToString(), fila[2].ToString(), fila[3].ToString(), fila[4].ToString(), fila[5].ToString());
                 }
+
                 LimpiarLista(); 
             }
             catch (Exception ex)
@@ -53,10 +60,12 @@ namespace Ventas
                     dni = mtbDNI.Text.Trim();
                     direccion = tbxDireccionDatos.Text.Trim();
                     telefono = mtbTelefonoDatos.Text.Trim();
-                    CClientes aux = new CClientes(nom, ape, dni, direccion, telefono);
+                   // CClientes aux = new CClientes(nom, ape, dni, direccion, telefono);
                     if (nom.Length > 0 && ape.Length > 0)
                     {
-                        operacion.AgregarClientes(aux);
+                      //peracion.AgregarClientes(aux);
+                        tcliente.Insertar(nom, ape, dni, direccion, telefono);
+                    
                         LimpiarDatos();
                         MessageBox.Show("Guardado");
                     }
@@ -64,7 +73,6 @@ namespace Ventas
                     {
                         MessageBox.Show("Los campos Nombres y Apellidos son obligatorio.");
                     }
-
                 }
                 catch (Exception ex)
                 {
@@ -72,7 +80,7 @@ namespace Ventas
                     MessageBox.Show(ex.Message, "No se pudo realizar el guardado");
                 }    
             }
-         
+
             if (btnAgregar.Text.Equals("Modificar"))
             {
                 try
@@ -84,8 +92,9 @@ namespace Ventas
                     dni = mtbDNI.Text.Trim();
                     dir = tbxDireccionDatos.Text.Trim();
                     tel = mtbTelefonoDatos.Text.Trim();
-                    CClientes aux = new CClientes(id, nom, ape, dni, dir, tel);
-                    operacion.ModificarCliente(aux);
+//                    CClientes aux = new CClientes(id, nom, ape, dni, dir, tel);
+  //                  operacion.ModificarCliente(aux);
+                    tcliente.Modificar(nom, ape, dir, tel, id);
                     LimpiarDatos();
                     MessageBox.Show("Modificado");
                     tabControl1.SelectedIndex = 0;
@@ -97,9 +106,6 @@ namespace Ventas
                     MessageBox.Show(Ex.ToString(), "Error al modificar.");
                 }  
             }
-
-
-            
         }
 
         void LimpiarLista() {
@@ -133,17 +139,16 @@ namespace Ventas
             try
             {
                 int id = (int)dgvLista.CurrentRow.Cells[0].Value;
-                operacion.ElminarCliente(id);
+                tcliente.Eliminar(id);
+                //operacion.ElminarCliente(id);
                 btnBuscar.PerformClick();
             }
             catch (Exception Ex)
             {
-
                 MessageBox.Show(Ex.ToString(),"Error al eliminar");
             }
-
         }
-        
+       
         private void tsmmodificar_Click(object sender, EventArgs e)
         {       
             tbxNombresDatos.Text = dgvLista.CurrentRow.Cells[1].Value.ToString();
@@ -152,8 +157,7 @@ namespace Ventas
             tbxDireccionDatos.Text = dgvLista.CurrentRow.Cells[4].Value.ToString();
             mtbTelefonoDatos.Text = dgvLista.CurrentRow.Cells[5].Value.ToString();
             btnAgregar.Text = "Modificar";
-            tabControl1.SelectedIndex=1;    
-            
+            tabControl1.SelectedIndex=1;
         }
     }
 }
